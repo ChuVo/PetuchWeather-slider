@@ -1,25 +1,45 @@
 .header {
   display: flex;
   align-items: center;
-  height: 20rem;
-  padding-left: 4rem;
+  height: 25rem;
+  padding-left: 8.9rem;
+
+  @media (max-width: 800px) {
+    height: 13rem;
+    padding-left: 2.3rem;
+  }
 
   .logo {
     align-items: center;
     display: flex;
-
+    
     &__img {
-      margin-right: 2rem;
+      margin: 0 2.2rem .4rem 0;
+
+      @media (max-width: 800px) {
+        margin-bottom: .6rem;
+        size: 50%;
+      }
+    }
+
+    &__text-box {
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     &__title {
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: bolder;
+      word-spacing: -.2rem;
+      
     }
 
     &__subtitle {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: #6E7F95;
+      margin: 8px   0 6px;
+      word-spacing: .1rem;
     }
   }
 }
