@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  padding-left: 4rem;
+
+  .logo {
+    align-items: center;
+    display: flex;
+
+    &__img {
+      margin-right: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      color: #6E7F95;
+    }
+  }
+}
