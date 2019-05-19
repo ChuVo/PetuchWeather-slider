@@ -1,10 +1,15 @@
 .slider {
-  padding: 10px;
-  background: radial-gradient(rgb(223, 232, 248) 15%, transparent 16%) 0 0, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px;
-  background-size: 5px 5px;
-  height: 100%;
-  overflow: hidden;
-  width: 150%;
+  background: radial-gradient(rgb(218, 230, 250) 15%, transparent 16%) 0 0, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px;
+  background-size: 10px 10px;  
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+
+  &__container {
+    height: 50rem;
+    position: relative;
+    width: 100%;
+  }
 
   &__item {
     display: flex;
@@ -14,26 +19,88 @@
     font-weight: bold;
     justify-content: center;
     padding-top: 15px;
-    position: relative;
-    
+    position: absolute;
     width: 51.5rem;
+
+    &--rain {
+      left: 0;
+      top: 23%;
+      transform: translateX(-3%);
+      width: 53.5rem;
+    }
+
+    &--hot {
+      right: -21%;
+      top: 73%;
+      transform: translateX(-35%);
+      width: 51.5rem;
+    }
+
+    &--torn {
+      left: 50%;
+      top: 7.5%;
+      transform: translateX(-50%);
+      width: 51.5rem;      
+    }
+
+    &--drist {
+      left: 19.5%;
+      top: 60.5%;
+      transform: translateX(-0%);
+      width: 53.5rem;
+    }
+
+    &--may {
+      right: -10%;
+      top: 2%;
+      transform: translateX(32%);
+      width: 51.5rem;
+    }
+
+    &--event {
+      right: 6%;
+      top: 38%;
+      /* transform: translateX(-35%); */
+      width: 53.3rem;
+    }
+
+    
   }
+
+
 
   &__line {
     height: .7rem;
     position: absolute;
     top: 0;
     width: 100%;
-  }
 
-  &__line:nth-child(1) {
-    background: red;
+    &--bg-yellow {
+      background: #fd0;
+    }
+
+    &--bg-blue {
+      background: #6be;
+    }
+
+    &--bg-red {
+      background: #c22;
+    }
+
+    &--bg-green {
+      background: #95C11B;
+    }
   }
 
   &__title {
-    font-size: 4rem;
-    letter-spacing: -3px;
+    font-size: 2.4rem;
     position: relative;
+    letter-spacing: -1.5px;
+
+    &--font-big {
+      font-size: 4rem;
+      letter-spacing: -3px;
+    }
   }
 
   &__text {
@@ -42,8 +109,22 @@
     color: #6E7F95;
     line-height: 21px;
     margin: 8px   0 6px;
-    word-spacing: .1rem;
     width: 80%;
+  }
+
+  &__gift {
+    position: relative;
+
+    &:after {
+      content: '';
+      background-image: url(../images/gift.png);
+      background-size: cover;
+      position: absolute;
+      right: -1.5rem;
+      top: 20%;
+      display: block;
+      size: 1rem;
+    }
   }
 }
 
@@ -58,7 +139,7 @@
 }
 
 #tornado:after {
-  background: red;
+  background: #c22;
   content: "новинка";
   padding: .5rem .4rem .4rem .7rem ;
   right: -52%;
@@ -71,4 +152,27 @@
   padding: .5rem .5rem .4rem .7rem ;
   right: -73%;
   top: 22%;
+}
+
+.slider__range {
+  position: relative;
+  outline: none;
+  
+}
+
+input#range[type=range] {
+  -webkit-appearance: none;
+  background-color:transparent;
+  margin: 6px 4%;
+  width: 91.3%;
+}
+input#range[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-image: url(../images/range.png);
+  background-color: #EFF4FD;
+  opacity: 0.9;
+  border-radius: 20px;
+  width: 89px;
+  height: 40px;
+  cursor: pointer;
 }
