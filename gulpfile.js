@@ -32,14 +32,16 @@ const paths = {
       styles: './src/templates/**/*.css',
       scripts: './src/templates/**/*.js',
       fonts: './src/fonts/**/*',
-      images: './src/images/**/*'
+      images: './src/images/**/*',
+      media: './src/media/**/*'
     },
     build: {
       dir: 'build/',
       styles: 'build/styles',
       scripts: 'build/scripts',
       fonts: 'build/fonts',
-      images: 'build/images'
+      images: 'build/images',
+      media: 'build/media'
     },
     buildNames: {
       styles: 'index.min.css',
@@ -177,12 +179,17 @@ gulp.task( 'build-images', () =>
         .pipe( gulp.dest( paths.build.images ))
 );
 
+gulp.task( 'build-media', () =>
+    gulp.src( paths.src.media )
+      .pipe( gulp.dest( paths.build.media ))
+);
+
 gulp.task('clean-build', () => {
   return gulp.src('./build', { read: false })
     .pipe(clean());
 });
 
-gulp.task( 'build', [ 'build-js', 'build-css', 'build-fonts', 'build-images', 'compile'] );
+gulp.task( 'build', [ 'build-js', 'build-css', 'build-fonts', 'build-images', 'build-media', 'compile'] );
 
 gulp.task( 'default', ['build'] );
 gulp.task( 'dev', ['build', 'browserSync'] );

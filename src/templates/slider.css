@@ -1,7 +1,8 @@
 .slider {
+  position: relative;
   background: radial-gradient(rgb(218, 230, 250) 15%, transparent 16%) 0 0, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px;
-  background-size: 10px 10px;  
-  overflow-x: hidden;
+  background-size: 10px 10px;
+  overflow-X: hidden;
   overflow-y: visible;
   width: 100%;
 
@@ -15,17 +16,14 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    height: 12rem;
     font-weight: bold;
     justify-content: center;
-    padding-top: 15px;
     position: absolute;
     width: 51.5rem;
 
     &--rain {
       left: 0;
       top: 23%;
-      transform: translateX(-3%);
       width: 53.5rem;
     }
 
@@ -46,25 +44,26 @@
     &--drist {
       left: 19.5%;
       top: 60.5%;
-      transform: translateX(-0%);
       width: 53.5rem;
     }
 
     &--may {
       right: -10%;
       top: 2%;
-      transform: translateX(32%);
       width: 51.5rem;
     }
 
     &--event {
       right: 6%;
       top: 38%;
-      /* transform: translateX(-35%); */
       width: 53.3rem;
     }
 
-    
+    &--event2 {
+      left: -25%;
+      top: 62%;
+      width: 53.3rem;
+    }
   }
 
 
@@ -73,7 +72,13 @@
     height: .7rem;
     position: absolute;
     top: 0;
+    overflow: hidden;
+    transition: .5s;
     width: 100%;
+
+    &--video {      
+      height: 185%;
+    }
 
     &--bg-yellow {
       background: #fd0;
@@ -92,14 +97,36 @@
     }
   }
 
+  &__video {
+    position: relative;
+    transition: .4s;
+    width: 100%;
+  }
+
   &__title {
     font-size: 2.4rem;
     position: relative;
     letter-spacing: -1.5px;
+    transition: .5s;
+    margin-top: 3.6rem;
 
-    &--font-big {
+    &--color {
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    
+
+    &--font-torn,
+    &--font-hot {
       font-size: 4rem;
-      letter-spacing: -3px;
+      letter-spacing: -2.6px;
+      margin-top: 2.4rem;
+    }
+
+    &--font-hot {
+      letter-spacing: -2px;
+      word-spacing: -5px;
+      margin-top: 2.4rem;
     }
   }
 
@@ -110,6 +137,19 @@
     line-height: 21px;
     margin: 8px   0 6px;
     width: 80%;
+
+    &--may {
+      transform: translate(1px, 1px);
+    }
+
+    &--hot {
+      transform: translate(6px, -2px);
+    }
+
+    &--event {
+      transform: translate(1px, 6px);
+      width: 65%;
+    }
   }
 
   &__gift {
@@ -129,20 +169,39 @@
 }
 
 #tornado:before,
-#tornado:after {
+#tornado:after,
+#hot:after,
+#rain:after {
   color: white;
   display: block;
   font-size: 10px;
   letter-spacing: 1px;
   position: absolute;
+  right: -1.4rem;
+  transform: translateX(100%);
   text-transform: uppercase;
+}
+
+#rain:after {
+  background: #FCD300;
+  content: "только летом";
+  letter-spacing: .5px;
+  right: -2rem;
+  padding: .5rem .4rem .4rem .7rem ;
+  top: 22%;
+}
+
+#hot:after {
+  background: #FCD300;
+  content: "ликвидация";
+  padding: .5rem .4rem .4rem .7rem ;
+  top: 22%;
 }
 
 #tornado:after {
   background: #c22;
   content: "новинка";
   padding: .5rem .4rem .4rem .7rem ;
-  right: -52%;
   top: 22%;
 }
 
@@ -150,7 +209,7 @@
   background: gray;
   content: " 18+";
   padding: .5rem .5rem .4rem .7rem ;
-  right: -73%;
+  right: -50%;
   top: 22%;
 }
 
