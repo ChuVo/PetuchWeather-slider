@@ -2,11 +2,15 @@
   display: flex;
   align-items: center;
   height: 25rem;
-  padding-left: 8.9rem;
+  padding-left: 89px;
 
-  @media (max-width: 800px) {
-    height: 13rem;
-    padding-left: 2.3rem;
+  @media (max-width: 900px) {
+    height: 14rem;
+    padding-left: 25px;
+  }
+
+  @media (max-height: 765px) {
+    height: 70px;
   }
 
   .logo {
@@ -16,14 +20,14 @@
     &__img {
       margin: 0 2.2rem .4rem 0;
 
-      @media (max-width: 800px) {
-        margin-bottom: .6rem;
+      @media (max-width: 900px) {
+        margin-bottom: 5px;
         size: 50%;
       }
     }
 
     &__text-box {
-      @media (max-width: 800px) {
+      @media (max-width: 900px) {
         display: none;
       }
     }

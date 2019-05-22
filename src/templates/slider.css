@@ -2,14 +2,16 @@
   position: relative;
   background: radial-gradient(rgb(218, 230, 250) 15%, transparent 16%) 0 0, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px;
   background-size: 10px 10px;
-  overflow-X: hidden;
-  overflow-y: visible;
   width: 100%;
 
   &__container {
     height: 50rem;
     position: relative;
     width: 100%;
+
+    @media (max-width: 900px) {
+      height: 75vh;
+    }
   }
 
   &__item {
@@ -19,12 +21,48 @@
     font-weight: bold;
     justify-content: center;
     position: absolute;
-    width: 51.5rem;
+    
+    @media (max-width: 900px) {
+      position: relative;
+    }
 
     &--rain {
       left: 0;
       top: 23%;
       width: 53.5rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+      
+      @media (max-width: 900px) {
+        left: -15.5%;
+        top: -23px;
+        width: 290px;
+      }
+
+      @media (max-height: 736px) {
+        top: -15%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -40%;
+      }
+
+      @media (height:411px) and (orientation: landscape) {
+        top: -40%;
+        left:0;
+      }
+
+      @media (height:414px) and (orientation: landscape) {
+        top: -16%;
+        left:0;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -38%;
+        left: 2%;
+      }
     }
 
     &--hot {
@@ -32,41 +70,222 @@
       top: 73%;
       transform: translateX(-35%);
       width: 51.5rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        right:-86%;
+        top: -2.3%;
+      }
+
+      @media (max-height: 736px) {
+        top: -14%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -56%;
+      }
+
+      @media (height:411px) and (orientation: landscape) {
+        top: -30%;
+      }
+
+      @media (height:375px) and (orientation: landscape) {
+        top: -38%;
+      }
+
+      @media (height:414px) and (orientation: landscape) {
+        top: -24%;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -28%;
+      }
     }
 
     &--torn {
       left: 50%;
       top: 7.5%;
       transform: translateX(-50%);
-      width: 51.5rem;      
+      width: 51.5rem;
+      
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        top: 18px;
+        left: 55%;
+        width: 339px;
+      }
+
+      @media (max-height:810px) {
+        top: 1%;
+      }
     }
 
     &--drist {
       left: 19.5%;
       top: 60.5%;
       width: 53.5rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        left: 75%;
+        top: 30px;
+      }
+
+      @media (max-height: 736px) {
+        top: 2%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -27%;
+      }
+      @media (height:411px) and (orientation: landscape) {
+        top: -12%;
+      }
+
+      @media (height:375px) and (orientation: landscape) {
+        top: -16%;
+      }
+
+      @media (height:414px) and (orientation: landscape) {
+        top: -9%;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -9%;
+      }
     }
 
     &--may {
       right: -10%;
       top: 2%;
       width: 51.5rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        right: 31%;
+        top: 1%;
+        width: 365px;
+      }
+
+      @media (max-height: 736px) {
+        top: -13%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -80%;
+        right: 0;
+      }
+
+      @media (height:411px) and (orientation: landscape) {
+        top: -30%;
+      }
+
+      @media (height:375px) and (orientation: landscape) {
+        top: -74%;
+        left:0;
+      }
+
+      @media (height:414px) and (orientation: landscape) {
+        top: -29%;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -38%;
+        left: -1%;
+      }
     }
 
     &--event {
       right: 6%;
       top: 38%;
       width: 53.3rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        right: -41%;
+        top: 5.6%;
+      }
+
+      @media (max-height: 736px) {
+        top: -13%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -80%;
+      }
+
+      @media (height:411px) and (orientation: landscape) {
+        top: -43%;
+        right: -55%;
+      }
+
+      @media (height:375px) and (orientation: landscape) {
+        top: -57%;
+      }
+
+      @media (height:414px) and (orientation: landscape) {
+        top: -42%;
+        left:57%;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -98%;
+        left: 26%;
+      }
     }
 
     &--event2 {
       left: -25%;
       top: 62%;
       width: 53.3rem;
+
+      @media (max-width: 1450px) {
+        width: 40rem;
+      }
+
+      @media (max-width: 900px) {
+        left: -55%;
+        top: -10%;
+      }
+
+      @media (max-height: 736px) {
+        top: -13%;
+        left: -50%;
+      }
+
+      @media (max-height:765px) and (orientation: landscape) {
+        top: -80%;
+      }
+
+      @media (height:360px) and (orientation: landscape) {
+        top: -111%;
+        left: -28%;
+      }
+    }
+
+    @media (max-width: 374px) {
+      width: 240px;
+    }
+
+    @media (max-width: 640px) and (orientation: landscape) {
+      width: 240px;
     }
   }
-
-
 
   &__line {
     height: .7rem;
@@ -76,8 +295,12 @@
     transition: .5s;
     width: 100%;
 
+    @media (max-width: 900px) {
+      height: 3px;
+    }
+
     &--video {      
-      height: 185%;
+      height: 160%;
     }
 
     &--bg-yellow {
@@ -106,27 +329,63 @@
   &__title {
     font-size: 2.4rem;
     position: relative;
-    letter-spacing: -1.5px;
+    letter-spacing: -.15rem;
     transition: .5s;
     margin-top: 3.6rem;
+
+    @media (max-width: 900px) {
+      font-size: 15px;
+      margin-top: 17px;
+    }
 
     &--color {
       color: white;
       text-shadow: 1px 1px 2px black;
-    }
-    
+    }    
 
     &--font-torn,
     &--font-hot {
       font-size: 4rem;
-      letter-spacing: -2.6px;
+      letter-spacing: -.26rem;
       margin-top: 2.4rem;
+
+      @media (max-width: 900px) {
+        font-size: 20px;
+        margin-top:17px;
+        letter-spacing: -1.13px;
+      }
     }
 
     &--font-hot {
-      letter-spacing: -2px;
-      word-spacing: -5px;
+      letter-spacing: -.2rem;
+      word-spacing: -.5rem;
       margin-top: 2.4rem;
+
+      @media (max-width: 900px){
+        font-size: 19px;
+        margin-top: 18px;
+        letter-spacing: -.2px;
+      }
+    }
+
+    &--may {
+      @media (max-width: 900px) {
+        letter-spacing: -.5px;
+      }
+    }
+
+    &--event {
+      @media (max-width: 900px) {
+        letter-spacing: -.13px;
+      }
+    }
+
+    @media (max-width: 374px) {
+      margin-top: 10px;
+    }
+
+    @media (max-height:810px) and (orientation: landscape) {
+      margin-top: 10px;
     }
   }
 
@@ -134,23 +393,71 @@
     font-size: 1.3rem;
     font-weight: normal;
     color: #6E7F95;
-    line-height: 21px;
-    margin: 8px   0 6px;
+    line-height: 2.1rem;
+    margin: .8rem   0 .6rem;
     width: 80%;
+
+    @media (max-width: 900px) {
+      font-size: 11px;
+      letter-spacing: -.27px;
+      word-spacing: -1px;
+      width: 266px;
+    }
+
+    &--torn {
+      @media (max-width: 900px) {
+        transform: translate(1px,2px);
+      }
+    }
 
     &--may {
       transform: translate(1px, 1px);
+
+      @media (max-width: 900px) {
+        line-height: 16px;
+        transform: translate(-1px, 6px);
+        width: 226px;
+      }
     }
 
     &--hot {
       transform: translate(6px, -2px);
+
+      @media (max-width: 900px) {
+        transform: translate(0px,3px);
+        line-height: 16px;
+        width: 243px;
+      }
     }
 
     &--event {
       transform: translate(1px, 6px);
       width: 65%;
+
+      @media (max-width: 900px) {
+        transform: translate(2px, 4px);
+        line-height: 16px;
+        width: 267px;
+      }
+    }
+    
+    &--gift {
+      @media (max-width: 900px) {
+        transform: translate(-19px,4px);
+        width: 240px;
+      }
+    }
+
+    @media (max-width: 374px) {
+      margin: 0;
+    }
+
+    @media (max-height:810px) and (orientation: landscape) {
+      margin: 0;
     }
   }
+
+  
 
   &__gift {
     position: relative;
@@ -174,21 +481,31 @@
 #rain:after {
   color: white;
   display: block;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: .1rem;
   position: absolute;
   right: -1.4rem;
   transform: translateX(100%);
   text-transform: uppercase;
+
+  @media (max-width: 900px) {
+    font-size: 8px;
+    letter-spacing: .6px;
+  }
 }
 
 #rain:after {
   background: #FCD300;
   content: "только летом";
-  letter-spacing: .5px;
+  letter-spacing: .05rem;
   right: -2rem;
   padding: .5rem .4rem .4rem .7rem ;
   top: 22%;
+
+  @media (max-width: 900px) {
+    top: 0;
+    right: -13px;
+  }
 }
 
 #hot:after {
@@ -196,6 +513,11 @@
   content: "ликвидация";
   padding: .5rem .4rem .4rem .7rem ;
   top: 22%;
+
+  @media (max-width: 900px) {
+    top: 0;
+    right: -11px;
+  }
 }
 
 #tornado:after {
@@ -203,6 +525,11 @@
   content: "новинка";
   padding: .5rem .4rem .4rem .7rem ;
   top: 22%;
+
+  @media (max-width: 900px) {
+    top: 1px;
+    right: -16px;
+  }
 }
 
 #tornado:before {
@@ -211,27 +538,40 @@
   padding: .5rem .5rem .4rem .7rem ;
   right: -50%;
   top: 22%;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .slider__range {
   position: relative;
   outline: none;
-  
-}
+
+  @media (max-width: 900px) {
+    transform: translateY(-29px);
+  }
+ }
 
 input#range[type=range] {
   -webkit-appearance: none;
   background-color:transparent;
-  margin: 6px 4%;
+  margin: .6rem 4%;
   width: 91.3%;
 }
 input#range[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-image: url(../images/range.png);
+  background-size: ccover;
   background-color: #EFF4FD;
   opacity: 0.9;
-  border-radius: 20px;
-  width: 89px;
-  height: 40px;
+  border-radius: 2rem;
+  width: 8.9rem;
+  height: 4rem;
   cursor: pointer;
+
+  @media (max-width: 900px) {
+    width: 89px;
+    height: 40px;
+  }
 }

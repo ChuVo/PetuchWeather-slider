@@ -5,6 +5,10 @@
 
 html {
   font-size: 10px;
+
+  @media (max-width: 1200px) {
+    font-size: 9px;
+  }
 }
 
 body {
@@ -13,4 +17,10 @@ body {
 
 .main {
   width: 100%;
+  min-height: calc(100vh - 25rem);
+  overflow-x: hidden;
+
+  @media (max-width: 800px) {
+    min-height: calc(100vh - 13rem);
+  }
 }
