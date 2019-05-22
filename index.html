@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="petuch weateher">
+  <meta name="description" content="petuch weateher">
+  <meta property="og:title" content="Petuch Weather">
+  <meta property="og:url" content="https://github.io/CrazySouslik/"/>
+  <meta property="og:image"content="../images/welcom.jpg"/>
+  <meta property="og:image:width" content="600"/>
+  <meta property="og:image:height" content="300"/>
+  <title>Petuch Weather</title>
+  <link rel="stylesheet" href="styles/index.min.css">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+<body>
+  <header class="header">
+    <figure class="logo">
+      <img src="images/logo.png" alt="Petuch Weather logo" class="logo__img">
+      <figcaption class="logo__text-box">
+        <p class="logo__title">Petuch Weather</p>
+        <p class="logo__subtitle">Заказ погоды онлайн</p>
+      </figcaption>
+    </figure>    
+  </header>  <main class="main">
+    <div class="slider">
+      <div class="slider__container">
+        
+          <div class="slider__item slider__item--torn">
+            <div class="slider__line slider__line--bg-red"></div>
+            <h2 class="slider__title slider__title--font-torn" id="tornado">Торнадо</h2>
+            <p class="slider__text slider__text--torn">Выбери название из 5 000 женских имен. (Услуга выбора имени платная — 100 Р)</p>
+          </div>   
+          <div class="slider__item slider__item--drist">
+            <div class="slider__line slider__line--bg-blue"></div>
+            <h2 class="slider__title">Выберите подходящие осадки для вашeго бизнеса</h2>
+            <p class="slider__text">Интеграция со всеми погодными системами знакомыми человечеству. Кроме joomla</p>
+          </div>
+        
+          <div class="slider__item slider__item--rain">
+            <div class="slider__line slider__line--bg-yellow"></div>
+            <h2 class="slider__title " id="rain">Дoждь с грозой</h2>
+            <p class="slider__text slider__text--gift">Почувствуй себя Зевсом с приложением <span>Петуч Уетар.</span><span class="slider__gift">Идеальный подарок</span></p>
+          </div>
+    
+          <div class="slider__item slider__item--hot">
+            <div class="slider__line slider__line--bg-yellow"></div>
+            <h2 class="slider__title slider__title--font-hot" id="hot">Потная жара</h2>
+            <p class="slider__text slider__text--hot">Солнечная погода с температурой воздуха −65…+43 °С. Солнечные очки в подарок при заказе от 2-х дней</p>
+          </div>
+    
+          <div class="slider__item slider__item--may">
+            <div class="slider__line slider__line--bg-blue slider__line--width"></div>
+            <h2 class="slider__title slider__title--may">Солнечная погода на 9 мая</h2>
+            <p class="slider__text slider__text--may">Не нужно разгонять облака. Заказывайте погоду в приложении Петуч Уетар Говермент</p>
+          </div>
+    
+          <div class="slider__item slider__item--event" >
+            <div class="slider__line slider__line--bg-green"></div>
+            <h2 class="slider__title slider__title--event">Погода на мероприятие</h2>
+            <p class="slider__text slider__text--event">Выберите понравившуюся погоду в любой день. Даже во вторник</p>
+          </div>
+          
+          <div class="slider__item slider__item--event2" >
+            <div class="slider__line slider__line--bg-green"></div>
+            <h2 class="slider__title">Погода на мероприятие</h2>
+            <p class="slider__text slider__text--event">Выберите понравившуюся погоду в любой день. Даже во вторник</p>
+          </div>
+    
+          </div>
+    
+      
+      
+    </div>
+    <input type="range" min="0"  max="100" value="100" id="range" class="slider__range">  </main>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>    
+  <script type="text/javascript" src="scripts/index.min.js"></script>
+</body>
+</html>
